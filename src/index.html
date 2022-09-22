@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struct</title>
+    <style>
+        body{
+            margin: 0;
+        }
+    </style>
+    <script src="./js/scripts.js" type="module"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <div class="struct-drop" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
+        <button onclick="addButton()" class="dropbtn menu">ADD</button>
+        <div id="myDropdown" class="dropdown-content">
+            <div id="beam">
+                
+                <a onclick="beamButton()" class="menu">Beam</a>
+                <div id="beam-menu" class="beam-menu-content menu">
+                    <label>Point 1:</label><input type="text" id="p1x"></input>,<input type="text" id="p1y"></input>,<input type="text" id="p1z"></input>
+                    <label>Point 2:</label><input type="text" id="p2x"></input>,<input type="text" id="p2y"></input>,<input type="text" id="p2z"></input>
+                </div>
+            </div>
+
+            <div id="support" class="hid">
+                
+                <a onclick="supportButton()" class="menu">Support</a>
+                <div id="support-menu" class="support-menu-content menu">
+                    <label>Point:</label><input type="text" id="p1x"></input>,<input type="text" id="p1y"></input>,<input type="text" id="p1z"></input>
+                    <select name="type">
+                        <option value="pin">Pin</option>
+                        <option value="fixed">Fixed</option>
+                        <option value="roller">Roller</option>
+                    </select>
+                </div>
+            </div>
+
+            
+            <div id="force" class="hid">
+                
+                <a onclick="forceButton()" class="menu">Force</a>
+                
+
+
+                <div id="force-menu" class="force-menu-content menu">
+                    <label>Point:</label><input type="text" id="p1x"></input>,<input type="text" id="p1y"></input>,<input type="text" id="p1z"></input>
+                    <select name="type">
+                        <option value="pin">Pin</option>
+                        <option value="fixed">Fixed</option>
+                        <option value="roller">Roller</option>
+                    </select>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+    <div class="options" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
+        <a onclick="grid()">
+            <span class="icon"><img src="./Icons/gridIcon.png"></span>
+        </a>
+        <a onclick="axes()">
+            <span class="icon"><img src="./Icons/axisIcon.png"></span>
+        </a>
+        <a onclick="reset()">
+            <span class="icon"><img src="./Icons/axisIcon.png"></span>
+        </a>
+    </div>
+
+    <div id="element-info" class="element-info">
+        <h2 id="element">--</h2>
+        <div id="position"></div>
+    </div>
+</body>
+</html>
